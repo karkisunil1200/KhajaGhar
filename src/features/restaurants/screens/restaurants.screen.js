@@ -6,7 +6,8 @@ import styled from "styled-components/native";
 
 const SafeArea = styled(SafeAreaView)`
   flex: 1;
-  margin-top: ${StatusBar.currentHeight}px;
+  // this fixes the height problem on IOS
+  ${StatusBar.currentHeight && `margin-top: ${StatusBar.currentHeight}px`}
 `;
 
 const SearchContainer = styled.View`
