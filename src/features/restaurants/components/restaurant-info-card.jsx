@@ -7,18 +7,19 @@ const RestaurantCard = styled(Card)`
 `;
 
 const RestaurantCardCover = styled(Card.Cover)`
-   padding: ${(props) => props.theme.space[3]}
+  padding: ${(props) => props.theme.space[3]};
   background-color: ${(props) => props.theme.colors.primary};
 `;
 
 const Title = styled(Text)`
   padding: ${(props) => props.theme.space[3]};
   color: ${(props) => props.theme.colors.ui.primary};
+  font-family: ${(props) => props.theme.fonts.body};
 `;
 
 const RestaurntInfoCard = ({ restaurant = {} }) => {
   const {
-    name = "Baratiea",
+    name = "Baratiea Restaurant",
     icon,
     photos = [
       "https://www.foodiesfeed.com/wp-content/uploads/2019/06/top-view-for-box-of-2-burgers-home-made-600x899.jpg",
